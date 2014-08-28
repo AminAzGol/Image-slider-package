@@ -1,0 +1,67 @@
+body {
+  background-color: hsl(0,0%,30%);
+  
+} 
+
+.parent-3d {
+  -webkit-perspective: 0px;
+}
+
+.image-slider {
+  width: 300px;
+  height: 300px;
+  margin: 100px auto 0 auto;
+  -webkit-transform-style: preserve-3d;
+  border: 1px solid white;
+  box-shadow: 0px 0px 10px white;
+}
+
+.image {
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: rotatex(-180deg);
+  -webkit-animation-name: spin;
+  -webkit-animation-duration: 25s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -webkit-background-size: ;
+}
+
+.image a,img {
+  width: inherit;
+  height: inherit;
+}
+@-webkit-keyframes spin {
+  2%{
+    transform: translatez(1px) rotatex(0deg)
+  }
+  100%{
+    transform: translatez(-1px) rotatex(0deg)
+  }
+  
+}
+
+.image:nth-child(1) {
+  -webkit-animation-delay: 0s;
+  color: red;
+}
+.image:nth-child(2) {
+-webkit-animation-delay: 5s;
+  color: yellow;
+}
+.image:nth-child(3) {
+-webkit-animation-delay: 10s;
+  color: green;
+}
+.image:nth-child(4) {
+ -webkit-animation-delay: 15s;
+  color: magenta;
+}
+.image:nth-child(5) {
+  -webkit-animation-delay: 20s;
+}
+
+
